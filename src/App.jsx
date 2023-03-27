@@ -14,7 +14,10 @@ function App() {
   const handlePost = async (data) => {
     console.log("data made it to hanldePost", data);
     axios
-      .post(`http://localhost:3000/api/formData`, data)
+      .post(
+        `https://calculator-back-end-production.up.railway.app/api/formData`,
+        data
+      )
       .then((res) => {
         console.log("Response from server", res.data);
         setResults(res.data);
